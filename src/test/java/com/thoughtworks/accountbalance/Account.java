@@ -7,14 +7,20 @@ public class Account {
     private int total;
 
     public Account (int amount) {
-
+        total = amount;
     }
 
     public Integer amount() {
-        return 150;
+        return total;
     }
 
     public void deposit (int amount) {
+        total += amount;
+    }
 
+    public void withdraw (int amount) {
+        if (amount <= total) {
+            total -= amount;
+        }
     }
 }
